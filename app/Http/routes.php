@@ -21,3 +21,5 @@ Route::controllers([
 ]);
 
 Route::get('personas', 'PerfilBController@ListarPersonas');
+Route::get('perfil', 'PerfilBController@VerPerfil');
+Route::post('perfil/editando', 'PerfilBController@EditarPerfil');

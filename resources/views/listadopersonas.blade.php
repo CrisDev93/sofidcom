@@ -8,6 +8,9 @@
 </label>
 </br>
 @foreach ($contacto as $contacto)
- {{$contacto->nombre}} </br>
+
+ {{$contacto->nombre}} <input type="button" value="agregar" id="lp-agregar"> </br>
+
+ 
 @endforeach
 @endsection
