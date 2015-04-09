@@ -14,6 +14,7 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::get('publicaciones', 'PublicacionBController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -23,3 +24,4 @@ Route::controllers([
 Route::get('personas', 'PerfilBController@ListarPersonas');
 Route::get('perfil', 'PerfilBController@VerPerfil');
 Route::post('perfil/editando', 'PerfilBController@EditarPerfil');
+
