@@ -1,0 +1,13 @@
+@extends('app')
+
+@section('content')
+<h1>{{$var->TituloPublicacion}}</h1>
+	<h2>{{$var->Publicacion}}</h2>
+</br>
+@foreach ($publicaciones as $publicaciones)
+<a href="{{action('PublicacionBController@show',[$publicaciones->idPublicacion])}} ">{{$publicaciones->TituloPublicacion}}</a> </br>
+
+ 
+@endforeach
+
+@endsection

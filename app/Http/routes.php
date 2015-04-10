@@ -21,5 +21,12 @@ Route::controllers([
 ]);
 
 Route::get('personas', 'PerfilBController@ListarPersonas');
+
 Route::get('perfil', 'PerfilBController@VerPerfil');
 Route::post('perfil/editando', 'PerfilBController@EditarPerfil');
+Route::get('publicaciones', 'PublicacionBController@index');
+Route::get('publicacion/create', 'PublicacionBController@create');
+Route::post('publicacion', 'PublicacionBController@store');
+Route::get('publicaciones/{id}', 'PublicacionBController@show');
+
+
