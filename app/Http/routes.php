@@ -28,5 +28,6 @@ Route::get('publicaciones', 'PublicacionBController@index');
 Route::get('publicacion/create', 'PublicacionBController@create');
 Route::post('publicacion', 'PublicacionBController@store');
 Route::get('publicaciones/{id}', 'PublicacionBController@show');
+Route::post('comentario', 'PublicacionBController@storeC');
 
 

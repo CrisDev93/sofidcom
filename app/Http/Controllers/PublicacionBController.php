@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use App\publicaciones;
+use App\comentario;
 use Request;
 
 class PublicacionBController extends Controller {
@@ -45,7 +46,15 @@ class PublicacionBController extends Controller {
 		publicaciones::create($input);
 		return Redirect('publicaciones');
 	}
-
+	public function storeC()
+	{
+		//
+		$input = Request::all();
+		$input['idUsuario']= Auth::user()->id;
+		comentario::create($input);
+		//return $input['idPublicacion'];
+		return Redirect('publicaciones/'.$input['idPublicacion']);
+	}
 	/**
 	 * Display the specified resource.
 	 *
@@ -54,9 +63,16 @@ class PublicacionBController extends Controller {
 	 */
 	public function show($id)
 	{
-		$publicacion = DB::table('publicacion')->where('idPublicacion',$id )->first();
+		$publicacion = DB::table('publicacion')->where('idPublicacion',$id )
+		->join('usuarios','publicacion.idUsuario','=','usuarios.id')
+		->select('publicacion.idPublicacion','publicacion.TituloPublicacion','publicacion.Publicacion','usuarios.nombre')->get();
 
-		$comentarios = DB::table('comentario')->where('idPublicacion',$id )->get();
+		$comentarios = DB::table('comentario')
+		->where('idPublicacion',$id )
+		->join('usuarios','comentario.idUsuario','=','usuarios.id')
+		->select('comentario.Contenido','usuarios.nombre')
+		->get();
+		//return $publicacion;
 		return view('publicacion')->with("publicacion",$publicacion)->with("comentarios",$comentarios);
 		
 	}
