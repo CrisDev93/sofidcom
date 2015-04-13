@@ -42,7 +42,6 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}">Inicio</a></li>
-<<<<<<< HEAD
 					<li><a href="{{ url('/temasdeayuda') }}">Temas de Ayuda
 					<li><a href="{{ url('/personas') }}">Añadir Contactos
 					<li><a href="{{ url('/solicitudes') }}">Solicitudes de Contacto
@@ -50,9 +49,9 @@
 					<li><a href="{{ url('/perfil') }}">Perfil
 					<li><a href="{{ url('/aboutus') }}">Acerca de Nosotros
 					</a></li>
-=======
+
 					
->>>>>>> 3e5653f02ab2808e87dc1b1e2ddc95d86bd013dc
+
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
