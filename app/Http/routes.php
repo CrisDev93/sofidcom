@@ -20,4 +20,7 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
+Route::get('chat','ProyectosController@crearChat');
+Route::get('chatvista','ProyectosController@viewChat');
 Route::get('personas', 'PerfilBController@ListarPersonas');
+

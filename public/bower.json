@@ -1,0 +1,18 @@
+{
+  "name": "sofidcom",
+  "version": "0.0.1",
+  "homepage": "sofidcom.app",
+  "authors": [
+    "Cristian Michel Pérez Zárate <michel_cristian@hotmail.com>"
+  ],
+  "description": "Paquetes del FrontEnd para el proyecto SofidCom",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "bootstrap-material-design":"~0.3.0"
+
+  }
+}

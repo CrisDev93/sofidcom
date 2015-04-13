@@ -4,7 +4,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>Sofidcom</title>
+
+	{!! Html::style('bower_components/bootstrap/dist/css/bootstrap.min.css') !!}
+	{!! Html::style('bower_components/bootstrap-material-design/dist/css/material.min.css') !!}
+	{!! Html::style('bower_components/bootstrap-material-design/dist/css/ripples.min.css') !!}
+	{!! Html::style('bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css') !!}
+
+
+
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
@@ -34,9 +42,13 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}">Inicio</a></li>
-					<li><a href="{{ url('/personas') }}">añadir
-					<li><a href="{{ url('/solicitudes') }}">solicitudes
-					<li><a href="{{ url('/perfil') }}">perfil</a></li>
+					<li><a href="{{ url('/temasdeayuda') }}">Temas de Ayuda
+					<li><a href="{{ url('/personas') }}">Añadir Contactos
+					<li><a href="{{ url('/solicitudes') }}">Solicitudes de Contacto
+					<li><a href="{{ url('/chatvista') }}">Proyectos
+					<li><a href="{{ url('/perfil') }}">Perfil
+					<li><a href="{{ url('/aboutus') }}">Acerca de Nosotros
+					</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -60,7 +72,17 @@
 	@yield('content')
 
 	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-</body>
+	{!! Html::script('bower_components/jquery/dist/jquery.min.js')!!}
+	{!! Html::script('bower_components/bootstrap/dist/js/bootstrap.min.js')!!}
+	{!! Html::script('bower_components/bootstrap-material-design/dist/js/ripples.min.js')!!}
+	{!! Html::script('bower_components/bootstrap-material-design/dist/js/material.min.js')!!}
+	{!! Html::style('bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css') !!}
+
+<script type="text/javascript">
+	$(document).on('ready',function(){
+
+		$.material.init();
+	});
+
+</script>
 </html>
