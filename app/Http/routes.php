@@ -24,3 +24,15 @@ Route::get('chat','ProyectosController@crearChat');
 Route::get('chatvista','ProyectosController@viewChat');
 Route::get('personas', 'PerfilBController@ListarPersonas');
 
+<<<<<<< HEAD
+=======
+Route::get('perfil', 'PerfilBController@VerPerfil');
+Route::post('perfil/editando', 'PerfilBController@EditarPerfil');
+Route::get('publicaciones', 'PublicacionBController@index');
+Route::get('publicacion/create', 'PublicacionBController@create');
+Route::post('publicacion', 'PublicacionBController@store');
+Route::get('publicaciones/{id}', 'PublicacionBController@show');
+Route::post('comentario', 'PublicacionBController@storeC');
+
+
+>>>>>>> 3e5653f02ab2808e87dc1b1e2ddc95d86bd013dc
